@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FEAC5E;
+    background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);
+}
+
+.game {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(6, auto);
+    perspective: 700;
+}
+
+.card {
+    display: flex;
+    border: 1px solid white;
+    transition: all .5s ease-in-out;
+    user-select: none;
+}
+
+.card img {
+    margin: auto;
+    backface-visibility: hidden;
+    transition: all .6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card-hidden {
+    cursor: pointer;
+}
+
+.card-hidden img {
+    transform: rotateY(180deg);
+}
+
+.card-flipped {
+    background: white;
+}
+
+.card-found {
+    background: #f8b500;
+}
+
+/* Win Modal */
+.win-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: #F2994A;
+    background: linear-gradient(to right, #F2C94C, #F2994A);
+    font-family: 'Quicksand', sans-serif;
+    padding: 3em;
+    text-align: center;
+    border: 2px solid #fff;
+    transition: all 1s;
+  }
+  
+  .win-modal h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+    margin-bottom: .3em;
+  }
+  
+  .btn {
+    transition: all .3s;
+  }
+  
+  .btn:hover {
+    color: #FF0080;
+  }
+
+  .buttons {
+    font-size: 25px;
+  }
+  
+  .buttons span {
+    cursor: pointer;
+    margin-right: 25px;
+  }
+  
+  .buttons a {
+    color: #fff;
+    text-decoration: none;
+  }
